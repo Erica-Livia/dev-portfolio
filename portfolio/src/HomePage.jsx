@@ -47,7 +47,7 @@ function HomePage() {
                         </div>
                     {/*    Picture*/}
                         <div className="flex w-1/2 justify-center">
-                            <img src={man} alt="erica" className="w-80 h-fit" />
+                            <img src={erica} alt="erica" className="w-80 h-fit bg-darkGrey" />
                         </div>
                     </div>
                 {/*    Proficiency Section*/}
