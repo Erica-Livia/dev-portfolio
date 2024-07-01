@@ -1,0 +1,73 @@
+[
+    {
+      "id": "1",
+      "image": "project1",
+      "title": "DESIGN PORTFOLIO",
+      "languages": [
+        "HTML",
+        "CSS"
+      ],
+      "live": "",
+      "code": ""
+    },
+    {
+      "id": "2",
+      "image": "project2",
+      "title": "E-LEARNING LANDING PAGE",
+      "languages": [
+        "HTML",
+        "CSS"
+      ],
+      "live": "",
+      "code": ""
+    },
+    {
+      "id": "3",
+      "image": "project3",
+      "title": "TO DO WEB APP",
+      "languages": [
+        "HTML",
+        "CSS",
+        "JAVASCRIPT"
+      ],
+      "live": "",
+      "code": ""
+    },
+    {
+      "id": "4",
+      "image": "project4",
+      "title": "ENTERTAINMENT WEB APP",
+      "languages": [
+        "HTML",
+        "CSS",
+        "JAVASCRIPT"
+      ],
+      "live": "",
+      "code": ""
+    },
+    {
+      "id": "5",
+      "image": "project5",
+      "title": "MEMORY GAME",
+      "languages": [
+        "HTML",
+        "CSS",
+        "JAVASCRIPT"
+      ],
+      "live": "",
+      "code": ""
+    },
+    {
+      "id": "6",
+      "image": "project6",
+      "title": "ART GALLERY SHOWCASE",
+      "languages": [
+        "HTML",
+        "CSS",
+        "JAVASCRIPT"
+      ],
+      "live": "",
+      "code": ""
+    }
+
+]
