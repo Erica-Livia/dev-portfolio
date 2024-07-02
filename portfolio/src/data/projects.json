@@ -1,15 +1,5 @@
 [
-  {
-    "id": "0",
-    "image": "project0",
-    "title": "DEVELOPER PORTFOLIO",
-    "languages": [
-      "REACTJS",
-      "TAILWIND CSS"
-    ],
-    "live": "https://blvkfolio.vercel.app/",
-    "code": "https://github.com/Erica-Livia/dev-portfolio"
-  },
+
   {
       "id": "1",
       "image": "project1",
@@ -21,6 +11,17 @@
       "live": "https://ericacommerce.vercel.app/",
       "code": "https://github.com/Erica-Livia/e-commerce"
     },
+  {
+    "id": "0",
+    "image": "project0",
+    "title": "DEVELOPER PORTFOLIO",
+    "languages": [
+      "REACTJS",
+      "TAILWIND CSS"
+    ],
+    "live": "https://blvkfolio.vercel.app/",
+    "code": "https://github.com/Erica-Livia/dev-portfolio"
+  },
     {
       "id": "2",
       "image": "project2",

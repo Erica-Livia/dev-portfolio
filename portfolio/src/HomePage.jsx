@@ -83,7 +83,7 @@ function HomePage() {
                             <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0">CONTACT ME
                             </button>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 py-8">
                             {filteredProjects.map((project) => (
                                 <ProjectCard
                                     key={project.id}
