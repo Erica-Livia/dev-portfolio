@@ -39,50 +39,51 @@ function HomePage() {
 
     return (
         <>
-            <div className="HomePage m-0 p-0 bg-black font-space">
-                <div className="px-32">
+            <div className="HomePage m-0 p-0 bg-black font-space border-none">
+                <div className="px-4 lg:px-32">
                     {/* Hero Section */}
-                    <div className="flex items-center justify-between pb-16 border-b border-grey">
+                    <div className="flex flex-col-reverse md:flex-row items-center pb-16 border-b border-grey border-t-none">
                         {/* Introduction */}
-                        <div className="container w-6/7">
-                            <div className="flex-col justify-between text-start space-y-8">
-                                <h2 className="text-white text-88px">Nice to meet you!
-                                    I'm <span className="underline-offset-1">Erica-Livia</span>
-                                </h2>
-                                <p className="text-grey text-18px w-1/2">Based in Kigali, I’m a front-end developer
-                                    passionate about building accessible web apps that users love.</p>
+                        <div className="flex-row w-full lg:w-4/5 justify-center md:justify-between text-center md:text-start space-y-8">
+                            <h2 className="text-white text-4xl lg:text-88px md:text-48px mb-4 ">Nice to meet you!
+                                I'm <span className="border-b-4 border-green">Erica-Livia.</span>
+                            </h2>
+                            <p className="text-grey text-lg md:text-18px">Based in Kigali, I’m a front-end developer
+                                passionate about building accessible web apps that users love.</p>
 
-                                <button className="text-white border-b border-b-green pb-2 hover:text-green">CONTACT
-                                    ME
-                                </button>
-                            </div>
+                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0 ">CONTACT
+                                ME
+                            </button>
                         </div>
                         {/* Picture */}
-                        <div className="flex w-1/2 justify-center">
-                            <img src={erica} alt="erica" className="w-80 h-fit bg-darkGrey"/>
+                        <div className="w-full md:w-1/2 flex justify-center md:justify-items-end lg:justify-center">
+                            <img src={erica} alt="erica" className="w-52 h-fit bg-darkGrey lg:w-96 md:w-96 mb-8 lg:pb-0"/>
                         </div>
                     </div>
                     {/* Proficiency Section */}
                     <div className="py-16 mx-auto">
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-12 text-center">
+                        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+                            <h2 className="text-white text-4xl md:text-88px">Skills</h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pt-8 pb-16 border-b">
                             {proficiency.map((skill, index) => (
                                 <div key={index} className="text-center">
-                                    <skill.icon className="text-white text-88px mb-4 mx-auto"/>
-                                    <h2 className="text-white text-48px">{skill.name}</h2>
-                                    <p className="text-grey text-18px">{skill.years} of Experience</p>
-                                    <p className="text-grey text-18px">{skill.level}</p>
+                                    <skill.icon className="text-white text-5xl md:text-88px mb-4 mx-auto"/>
+                                    <h2 className="text-white text-2xl md:text-48px">{skill.name}</h2>
+                                    <p className="text-grey text-lg md:text-18px">{skill.years} of Experience</p>
+                                    <p className="text-grey text-lg md:text-18px">{skill.level}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                     {/* Projects Section */}
-                    <div className="py-16">
-                        <div className="flex justify-between items-center ">
-                            <h2 className="text-white text-88px">Projects</h2>
-                            <button className="text-white border-b border-b-green pb-2 hover:text-green">CONTACT ME
+                    <div className="pb-16">
+                        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+                            <h2 className="text-white text-4xl md:text-88px">Projects</h2>
+                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0">CONTACT ME
                             </button>
                         </div>
-                        <div className="grid grid-cols-2 gap-8 py-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
                             {filteredProjects.map((project) => (
                                 <ProjectCard
                                     key={project.id}

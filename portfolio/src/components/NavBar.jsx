@@ -5,10 +5,10 @@ import { FaTwitter } from "react-icons/fa";
 
 function Navbar() {
     return (
-        <div className="navbar bg-black flex font-space text-white px-8 xl:px-32 md:px-32 sm:px-8 py-5">
-            <div className="container flex xl:flex  md:flex sm:flex justify-between items-center">
+        <div className="navbar bg-black font-space text-white px-8 xl:px-32 sm:px-4 py-6">
+            <div className="md:flex text-center md:justify-between text-2xl md:text-18px  border-none space-y-2">
                 <div className="text-24px sm:text-center">ericalivia</div>
-                <ul className="list-none flex gap-x-5 mt-3 sm:mt-0">
+                <ul className="list-none flex space-x-5 mt-0 sm:mt-0 justify-center">
                     <li><a href="https://github.com/Erica-Livia/" target="_blank" rel="noopener noreferrer"><SiGithub /></a></li>
                     <li><a href="https://www.frontendmentor.io/profile/Erica-Livia" target="_blank" rel="noopener noreferrer"><SiFrontendmentor /></a></li>
                     <li><a href="https://www.linkedin.com/in/erica-livia/" target="_blank" rel="noopener noreferrer"><BsLinkedin /></a></li>
