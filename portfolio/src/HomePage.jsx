@@ -24,13 +24,13 @@ const imageMap = {
 };
 
 const proficiency = [
-    { name: "HTML5", icon: FaHtml5, years: "3 Years", level: "Advanced" },
-    { name: "CSS3", icon: FaCss3Alt, years: "3 Years", level: "Advanced" },
-    { name: "JavaScript", icon: FaJs, years: "3 Years", level: "Advanced" },
-    { name: "ReactJS", icon: FaReact, years: "3 Years", level: "Advanced" },
-    { name: "NodeJS", icon: FaNodeJs, years: "3 Years", level: "Intermediate" },
-    { name: "Figma", icon: SiFigma, years: "2 Years", level: "Intermediate" },
-    { name: "TailwindCSS", icon: SiTailwindcss, years: "2 Years", level: "Advanced" },
+    { name: "HTML5", icon: FaHtml5, years: "2 Years", level: "Advanced" },
+    { name: "CSS3", icon: FaCss3Alt, years: "2 Years", level: "Advanced" },
+    { name: "JavaScript", icon: FaJs, years: "2 Years", level: "Advanced" },
+    { name: "ReactJS", icon: FaReact, years: "1 Year", level: "Advanced" },
+    { name: "NodeJS", icon: FaNodeJs, years: "1/2 Year", level: "Beginner" },
+    { name: "Figma", icon: SiFigma, years: "1 Year", level: "Intermediate" },
+    { name: "TailwindCSS", icon: SiTailwindcss, years: "1 Year", level: "Advanced" },
 ];
 
 function HomePage() {
@@ -63,7 +63,7 @@ function HomePage() {
                     {/* Proficiency Section */}
                     <div className="py-16 mx-auto">
                         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-                            <h2 className="text-white text-4xl md:text-88px">Skills</h2>
+                            <h2 className="text-white text-4xl lg:text-88px md:text-6xl">Skills</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pt-8 pb-16 border-b">
                             {proficiency.map((skill, index) => (
@@ -79,7 +79,7 @@ function HomePage() {
                     {/* Projects Section */}
                     <div className="pb-16">
                         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-                            <h2 className="text-white text-4xl md:text-88px">Projects</h2>
+                            <h2 className="text-white text-4xl lg:text-88px md:text-6xl">Projects</h2>
                             <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0">CONTACT ME
                             </button>
                         </div>

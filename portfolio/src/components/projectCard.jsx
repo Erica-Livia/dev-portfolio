@@ -2,7 +2,7 @@ import React from "react";
 
 function ProjectCard({ title, image, languages, live, code }) {
     return (
-        <div className="relative group">
+        <div className="relative group pt-2 pb-8">
             <div className="overflow-hidden">
                 <img src={image} className="w-full transition-transform duration-300 " alt={title} />
                 <div className="absolute -top-0 inset-0 flex flex-col items-center justify-center bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -11,7 +11,7 @@ function ProjectCard({ title, image, languages, live, code }) {
                 </div>
             </div>
             <h2 className="text-white text-24px mt-3">{title}</h2>
-            <p className="text-grey text-18px">{languages.join(", ")}</p>
+            <p className="text-grey text-18px font-light">{languages.join(", ")}</p>
 
 
             <div className="flex lg:hidden space-x-10 pt-4">
