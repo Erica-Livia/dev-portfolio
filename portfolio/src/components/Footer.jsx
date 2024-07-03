@@ -45,7 +45,7 @@ function Footer() {
     };
 
     return (
-        <div className="bg-darkGrey font-space text-white m-0 px-4 md:px-32">
+        <div className="bg-darkGrey font-space text-white m-0 px-4 lg:px-32">
             <div className="flex flex-col pt-8 mb-12 pb-8 border-b border-grey">
                 <div className="flex flex-col lg:flex-row lg:justify-between">
                     <div className="w-full lg:w-1/2 space-y-5">

@@ -124,8 +124,30 @@ function HomePage() {
                             ))}
                         </div>
                     </div>
+
+                    {/* Projects Section */}
+                    <div className="pb-16 ">
+                        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+                            <h2 className="text-white text-4xl lg:text-88px md:text-6xl">Projects</h2>
+                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0">CONTACT ME
+                            </button>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 py-8">
+                            {filteredProjects.map((project) => (
+                                <ProjectCard
+                                    key={project.id}
+                                    image={imageMap[project.image]}
+                                    title={project.title}
+                                    languages={project.languages}
+                                    live={project.live}
+                                    code={project.code}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
                     {/* More Section */}
-                    <div className="py-16 mx-auto">
+                    <div className="py-16 pb-24 mx-auto border-t border-grey">
                         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                             <h2 className="text-white text-4xl lg:text-88px md:text-6xl">More</h2>
                         </div>
@@ -155,7 +177,7 @@ function HomePage() {
                                 </button>
                             </nav>
                         </div>
-                        <div className="border-b border-grey py-8">
+                        <div className="py-8">
                             {activeSection === "experience" && (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
                                     {experiences.map((experience, index) => (
@@ -200,26 +222,6 @@ function HomePage() {
                                     ))}
                                 </div>
                             )}
-                        </div>
-                    </div>
-                    {/* Projects Section */}
-                    <div className="pb-16">
-                        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-                            <h2 className="text-white text-4xl lg:text-88px md:text-6xl">Projects</h2>
-                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0">CONTACT ME
-                            </button>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 py-8">
-                            {filteredProjects.map((project) => (
-                                <ProjectCard
-                                    key={project.id}
-                                    image={imageMap[project.image]}
-                                    title={project.title}
-                                    languages={project.languages}
-                                    live={project.live}
-                                    code={project.code}
-                                />
-                            ))}
                         </div>
                     </div>
                 </div>
