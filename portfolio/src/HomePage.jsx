@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiFigma, SiTailwindcss } from "react-icons/si";
@@ -33,16 +33,64 @@ const proficiency = [
     { name: "TailwindCSS", icon: SiTailwindcss, years: "1 Year", level: "Advanced" },
 ];
 
+const languagesSpoken = [
+    { language: "English", level: "Advanced" },
+    { language: "French", level: "Advanced" },
+    { language: "Kirundi", level: "Native" },
+    { language: "Kinyarwanda", level: "Advanced" },
+    { language: "Swahili", level: "Beginner" },
+];
+const experiences = [
+    {
+        title: "Software Engineer Intern",
+        company: "Teeket",
+        duration: "May 2024 - Present",
+        description: "Developed and maintained front-end the admin dashboard using ReactJS."
+    },
+    {
+        title: "Software Engineer Intern",
+        company: "ACLIS",
+        duration: "October 2023 - December 2023",
+        description: "Worked on various web development projects using JavaScript and HTML/CSS."
+    }
+];
+const education = [
+    {
+        degree: "Bachelor of Science in Software Engineering",
+        institution: "AFRICAN LEADERSHIP UNIVERSITY, Kigali, Rwanda",
+        duration: "May 2022 - Present"
+    },
+    {
+        degree: "Frontend Developer",
+        institution: "AZUBI AFRICA, Ghana",
+        duration: "October 2023 - Present"
+    }
+];
+const extracurricularActivities = [
+    {
+        activity: "Google Developers Group Member",
+        location: "Bujumbura, Burundi",
+        description: "Active participant in local developer meetups and events."
+    },
+    {
+        activity: "Volunteering Focolari Movement",
+        location: "Bujumbura, Burundi",
+        description: "Participation in local meetups and charity events."
+    }
+];
+
 function HomePage() {
     const { id } = useParams();
     const filteredProjects = id ? projects.filter(project => project.id === id) : projects;
+
+    const [activeSection, setActiveSection] = useState("experience");
 
     return (
         <>
             <div className="HomePage m-0 p-0 bg-black font-space border-none">
                 <div className="px-4 lg:px-32">
                     {/* Hero Section */}
-                    <div className="flex flex-col-reverse md:flex-row items-center pb-16 border-b border-grey border-t-none">
+                    <div className="flex flex-col-reverse md:flex-row items-center -mt-2 pb-12 border-b border-grey border-t-none">
                         {/* Introduction */}
                         <div className="flex-row w-full lg:w-4/5 justify-center md:justify-between text-center md:text-start space-y-8">
                             <h2 className="text-white text-4xl lg:text-88px md:text-48px mb-4 ">Nice to meet you!
@@ -74,6 +122,84 @@ function HomePage() {
                                     <p className="text-grey text-lg md:text-18px">{skill.level}</p>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                    {/* More Section */}
+                    <div className="py-16 mx-auto">
+                        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+                            <h2 className="text-white text-4xl lg:text-88px md:text-6xl">More</h2>
+                        </div>
+                        <div className="flex justify-center mb-8">
+                            <div className="block md:hidden relative">
+                                <select onChange={(e) => setActiveSection(e.target.value)}
+                                        className="text-lg md:text-18px bg-black text-white border border-gray-600 rounded px-4 py-2">
+                                    <option value="experience" className="text-grey">Experience</option>
+                                    <option value="languages" className="text-grey">Languages Spoken</option>
+                                    <option value="education" className="text-grey">Education</option>
+                                    <option value="extracurricular" className="text-grey">Extracurricular</option>
+                                </select>
+                            </div>
+                            <nav className="hidden md:flex space-x-4 text-lg md:text-18px">
+                                <button onClick={() => setActiveSection("experience")}
+                                        className={`text-white ${activeSection === "experience" && "border-b-2 border-green"}`}>Experience
+                                </button>
+                                <button onClick={() => setActiveSection("languages")}
+                                        className={`text-white ${activeSection === "languages" && "border-b-2 border-green"}`}>Languages
+                                    Spoken
+                                </button>
+                                <button onClick={() => setActiveSection("education")}
+                                        className={`text-white ${activeSection === "education" && "border-b-2 border-green"}`}>Education
+                                </button>
+                                <button onClick={() => setActiveSection("extracurricular")}
+                                        className={`text-white ${activeSection === "extracurricular" && "border-b-2 border-green"}`}>Extracurricular
+                                </button>
+                            </nav>
+                        </div>
+                        <div className="border-b border-grey py-8">
+                            {activeSection === "experience" && (
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                                    {experiences.map((experience, index) => (
+                                        <div key={index} className="text-left">
+                                            <h3 className="text-white text-2xl md:text-48px">{experience.title}</h3>
+                                            <p className="text-grey text-lg md:text-18px">{experience.company}</p>
+                                            <p className="text-grey text-lg md:text-18px">{experience.duration}</p>
+                                            <p className="text-grey text-lg md:text-18px">{experience.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {activeSection === "languages" && (
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                                    {languagesSpoken.map((language, index) => (
+                                        <div key={index} className="text-center">
+                                            <h2 className="text-white text-2xl md:text-48px">{language.language}</h2>
+                                            <p className="text-grey text-lg md:text-18px">{language.level}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {activeSection === "education" && (
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                                    {education.map((edu, index) => (
+                                        <div key={index} className="text-left">
+                                            <h3 className="text-white text-2xl md:text-48px">{edu.degree}</h3>
+                                            <p className="text-grey text-lg md:text-18px">{edu.institution}</p>
+                                            <p className="text-grey text-lg md:text-18px">{edu.duration}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {activeSection === "extracurricular" && (
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                                    {extracurricularActivities.map((activity, index) => (
+                                        <div key={index} className="text-left">
+                                            <h3 className="text-white text-2xl md:text-48px">{activity.activity}</h3>
+                                            <p className="text-grey text-lg md:text-18px">{activity.location}</p>
+                                            <p className="text-grey text-lg md:text-18px">{activity.description}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
                     {/* Projects Section */}
