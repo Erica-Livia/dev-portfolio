@@ -48,6 +48,18 @@
       "live": "landingpage-xi-lovat.vercel.app",
       "code": "https://github.com/Erica-Livia/CODSOFT"
     },
+  {
+    "id": "7",
+    "image": "project7",
+    "title": "WHERE IN THE WORLD",
+    "languages": [
+      "REST API",
+      "TAILWIND CSS",
+      "REACTJS"
+    ],
+    "live": "https://witw-lemon.vercel.app/",
+    "code": "https://github.com/Erica-Livia/where-in-the-world.git"
+  },
     {
       "id": "4",
       "image": "project4",

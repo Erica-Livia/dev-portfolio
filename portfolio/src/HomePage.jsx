@@ -12,6 +12,7 @@ import project3 from "./assets/project3.png";
 import project4 from "./assets/project4.png";
 import project5 from "./assets/project5.png";
 import project6 from "./assets/project6.png";
+import project7 from "./assets/project7.png";
 
 const imageMap = {
     "project0": project0,
@@ -21,6 +22,7 @@ const imageMap = {
     "project4": project4,
     "project5": project5,
     "project6": project6,
+    "project7": project7,
 };
 
 const proficiency = [
@@ -28,7 +30,7 @@ const proficiency = [
     { name: "CSS3", icon: FaCss3Alt, years: "2 Years", level: "Advanced" },
     { name: "JavaScript", icon: FaJs, years: "2 Years", level: "Advanced" },
     { name: "ReactJS", icon: FaReact, years: "1 Year", level: "Advanced" },
-    { name: "NodeJS", icon: FaNodeJs, years: "1/2 Year", level: "Beginner" },
+    // { name: "NodeJS", icon: FaNodeJs, years: "1/2 Year", level: "Beginner" },
     { name: "Figma", icon: SiFigma, years: "1 Year", level: "Intermediate" },
     { name: "TailwindCSS", icon: SiTailwindcss, years: "1 Year", level: "Advanced" },
 ];
@@ -88,15 +90,15 @@ function HomePage() {
     return (
         <>
             <div className="HomePage m-0 p-0 bg-black font-space border-none">
-                <div className="px-4 lg:px-32">
+                <div className="px-4 lg:px-32 w-full">
                     {/* Hero Section */}
-                    <div className="flex flex-col-reverse md:flex-row items-center -mt-2 pb-12 border-b border-grey border-t-none">
+                    <div className="flex flex-col-reverse md:flex-row items-center -mt-2 pb-12 border-b border-grey border-t-none w-full">
                         {/* Introduction */}
-                        <div className="flex-row w-full lg:w-4/5 justify-center md:justify-between text-center md:text-start space-y-8">
+                        <div className="flex-row w-full lg:w-full justify-center md:justify-between text-center md:text-start space-y-8">
                             <h2 className="text-white text-4xl lg:text-88px md:text-48px mb-4 ">Nice to meet you!
                                 I'm <span className="border-b-4 border-green">Erica-Livia.</span>
                             </h2>
-                            <p className="text-grey text-lg md:text-18px">Based in Kigali, I’m a front-end developer
+                            <p className="text-grey text-lg md:text-18px w-3/6">Based in Kigali, I’m a front-end developer
                                 passionate about building accessible web apps that users love.</p>
 
                             <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0 ">CONTACT
