@@ -81,7 +81,7 @@
         "CSS",
         "JAVASCRIPT"
       ],
-      "live": "drumkitsbeta.vercel.app",
+      "live": "https://drumkitsbeta.vercel.app/",
       "code": "https://github.com/Erica-Livia/mini-game/tree/main"
     },
     {
@@ -93,7 +93,7 @@
         "CSS",
         "JAVASCRIPT"
       ],
-      "live": "calculator-lyart-sigma.vercel.app\n",
+      "live": "https://calculator-lyart-sigma.vercel.app/",
       "code": "https://github.com/Erica-Livia/CODSOFT/tree/main/task-3-calculator"
     }
 
