@@ -98,7 +98,7 @@ function HomePage() {
                             <h2 className="text-white text-4xl lg:text-88px md:text-48px mb-4 ">Nice to meet you!
                                 I'm <span className="border-b-4 border-green">Erica-Livia.</span>
                             </h2>
-                            <p className="text-grey text-lg md:text-18px w-3/6">Based in Kigali, I’m a front-end developer
+                            <p className="text-grey text-lg md:text-18px w-full md:w-4/6">Based in Kigali, I’m a front-end developer
                                 passionate about building accessible web apps that users love.</p>
 
                             <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0 ">CONTACT
