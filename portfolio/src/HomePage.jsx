@@ -45,13 +45,13 @@ const languagesSpoken = [
 const experiences = [
     {
         title: "Software Engineer Intern",
-        company: "Teeket",
+        company: "Teeket Events and Experiences - Remote",
         duration: "May 2024 - Present",
         description: "Developed and maintained front-end the admin dashboard using ReactJS."
     },
     {
         title: "Software Engineer Intern",
-        company: "ACLIS",
+        company: "ACLIS - Bujumbura",
         duration: "October 2023 - December 2023",
         description: "Worked on various web development projects using JavaScript and HTML/CSS."
     }
@@ -101,8 +101,8 @@ function HomePage() {
                             <p className="text-grey text-lg md:text-18px w-full md:w-4/6">Based in Kigali, I’m a front-end developer
                                 passionate about building accessible web apps that users love.</p>
 
-                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0 ">CONTACT
-                                ME
+                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0 "><a href="#contact">CONTACT
+                                ME</a>
                             </button>
                         </div>
                         {/* Picture */}
@@ -131,7 +131,9 @@ function HomePage() {
                     <div className="pb-16 ">
                         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                             <h2 className="text-white text-4xl lg:text-88px md:text-6xl">Projects</h2>
-                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0">CONTACT ME
+                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0"><a
+                                href="#contact">CONTACT
+                                ME</a>
                             </button>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 py-8">

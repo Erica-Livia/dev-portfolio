@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SiFrontendmentor, SiGithub } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 import { BsLinkedin } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import emailjs from "emailjs-com";
@@ -45,7 +45,7 @@ function Footer() {
     };
 
     return (
-        <div className="bg-darkGrey font-space text-white m-0 px-4 lg:px-32">
+        <div className="bg-darkGrey font-space text-white m-0 px-4 lg:px-32" id="contact">
             <div className="flex flex-col pt-8 mb-12 pb-8 border-b border-grey">
                 <div className="flex flex-col lg:flex-row lg:justify-between">
                     <div className="w-full lg:w-1/2 space-y-5">
@@ -96,16 +96,11 @@ function Footer() {
                 </div>
             </div>
             <div className="md:flex justify-center md:justify-between text-24px pb-5 text-center space-y-8">
-                <a>ericalivia</a>
+                <a href="/">ericalivia</a>
                 <ul className="list-none flex gap-x-5 justify-center">
                     <li>
                         <a href="https://github.com/Erica-Livia/" target="_blank" rel="noopener noreferrer">
                             <SiGithub />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.frontendmentor.io/profile/Erica-Livia" target="_blank" rel="noopener noreferrer">
-                            <SiFrontendmentor />
                         </a>
                     </li>
                     <li>
@@ -114,7 +109,7 @@ function Footer() {
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/EricaLivia" target="_blank" rel="noopener noreferrer">
+                        <a href="https://x.com/BurundianLivia" target="_blank" rel="noopener noreferrer">
                             <FaTwitter />
                         </a>
                     </li>
