@@ -13,7 +13,7 @@ function App() {
         <Routes>
           {/* Define the routes */}
           <Route path="/" element={<HomePage />} />
-          <Route path="/onmyradar" element={<OnMyRadar />} />
+          <Route path="onmyradar" element={<OnMyRadar />} />
         </Routes>
         <Footer /> {/* Footer will always be displayed */}
       </div>
