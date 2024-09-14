@@ -3,10 +3,11 @@ import menya1 from './assets/menya1.png';
 import azubi from './assets/azubi.jpg';
 import menya2 from './assets/menya2.jpg';
 import synapsetop3 from './assets/synapsetop3.jpg';
+import { Link } from 'react-router-dom';
 
 const radarUpdates = [
     {
-        image: menya1, 
+        image: menya1,
         caption: "Discover the story behind Strong Sister and how we aim to empower women in Burundi. Our goals, achievements, and vision for a safer future continue to inspire change.",
         link: "https://strong-sister.vercel.app/"
     },
@@ -45,12 +46,12 @@ function OnMyRadar() {
                     <div key={index} className="radar-card bg-darkGrey p-4 rounded-lg shadow-lg">
                         <img src={update.image} alt="update" className="w-full h-48 object-cover mb-4 rounded" />
                         <p className="text-grey text-lg md:text-18px">{update.caption}</p>
-                        
+
                         {/* Conditionally render the button if a link is provided */}
                         {update.link && (
-                            <a 
-                                href={update.link} 
-                                target="_blank" 
+                            <a
+                                href={update.link}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white mt-4 inline-block bg-green hover:bg-darkGreen py-2 px-4 rounded"
                             >
@@ -60,15 +61,16 @@ function OnMyRadar() {
                     </div>
                 ))}
             </div>
-            
+
             {/* Floating Button */}
-            <a href="/">
-                <button
-                 className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors"
-            >
-                Back to Home
+
+            <button
+                
+            ><Link to="/" className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors">
+                    Back to Home
+                </Link>
             </button>
-            </a>
+
         </div>
     );
 }

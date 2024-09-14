@@ -13,6 +13,8 @@ import project4 from "./assets/project4.png";
 import project5 from "./assets/project5.png";
 import project6 from "./assets/project6.png";
 import project7 from "./assets/project7.png";
+import { Link } from 'react-router-dom';
+
 
 const imageMap = {
     project0,
@@ -223,13 +225,15 @@ function HomePage() {
                 </div>
 
                 {/* Floating Button */}
-                <a href="/onmyradar">
+
+                
                     <button
-                     className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors animate-pulse"
-                >
+                     
+                ><Link to="/onmyradar" className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors animate-pulse">
                     Life Highlights
+                </Link>
                 </button>
-                </a>
+                
                 
             </div>
         </>
