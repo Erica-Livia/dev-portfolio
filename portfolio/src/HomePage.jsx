@@ -46,6 +46,12 @@ const languagesSpoken = [
 
 const experiences = [
     {
+        title: "Frontend Engineer / Team Lead",
+        company: "Synapse Squad - A2SV AI for Impact Hackathon 2024",
+        duration: "July 2024 - Present",
+        description: "Led a team by overseeing project tasks, ensuring proper documentation, and managing timely submissions. Contributed to frontend development, coordinating efforts to deliver a functional and polished product."
+    },
+    {
         title: "Software Engineer Intern",
         company: "Teeket Events and Experiences - Remote",
         duration: "May 2024 - Present",
