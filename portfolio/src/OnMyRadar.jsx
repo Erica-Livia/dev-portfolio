@@ -22,6 +22,11 @@ const radarUpdates = [
         caption: "Thrilled to have completed the CMU-Africa Bridge Program! This experience has been a transformative journey of growth, collaboration, and innovation. 🚀📚",
     },
     {
+        image: menya1,
+        caption: "Discover the story behind Strong Sister and how we aim to empower women in Burundi. Our goals, achievements, and vision for a safer future continue to inspire change.",
+        link: "https://strong-sister.vercel.app/"
+    },
+    {
         image: azubi,
         caption: "A proud moment! Graduating from Azubi Africa’s Frontend Developer program has equipped me with the skills to build powerful web applications. Onward to new challenges!",
         // No link provided for this update
