@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa"; // Removed unused FaNodeJs
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiFigma, SiTailwindcss } from "react-icons/si";
 import erica from "../src/assets/erica.png";
 import projects from "../src/data/projects.json";
@@ -15,16 +15,15 @@ import project6 from "./assets/project6.png";
 import project7 from "./assets/project7.png";
 import { Link } from 'react-router-dom';
 
-
 const imageMap = {
-    project0,
-    project1,
-    project2,
-    project3,
-    project4,
-    project5,
-    project6,
-    project7,
+    "project0": project0,
+    "project1": project1,
+    "project2": project2,
+    "project3": project3,
+    "project4": project4,
+    "project5": project5,
+    "project6": project6,
+    "project7": project7,
 };
 
 const proficiency = [
@@ -32,6 +31,7 @@ const proficiency = [
     { name: "CSS3", icon: FaCss3Alt, years: "2 Years", level: "Advanced" },
     { name: "JavaScript", icon: FaJs, years: "2 Years", level: "Advanced" },
     { name: "ReactJS", icon: FaReact, years: "1 Year", level: "Advanced" },
+    // { name: "NodeJS", icon: FaNodeJs, years: "1/2 Year", level: "Beginner" },
     { name: "Figma", icon: SiFigma, years: "1 Year", level: "Intermediate" },
     { name: "TailwindCSS", icon: SiTailwindcss, years: "1 Year", level: "Advanced" },
 ];
@@ -40,21 +40,20 @@ const languagesSpoken = [
     { language: "English", level: "Advanced" },
     { language: "French", level: "Advanced" },
     { language: "Kirundi", level: "Native" },
-    { language: "Kinyarwanda", level: "Advanced" },
     { language: "Swahili", level: "Beginner" },
+    { language: "Spanish", level: "Beginner" },
 ];
-
 const experiences = [
     {
-        title: "Frontend Engineer / Team Lead",
-        company: "Synapse Squad - A2SV AI for Impact Hackathon 2024",
-        duration: "July 2024 - Present",
-        description: "Led a team by overseeing project tasks, ensuring proper documentation, and managing timely submissions. Contributed to frontend development, coordinating efforts to deliver a functional and polished product."
+        title: "AgTech & Innovation Lead",
+        company: "BioAmak Ltd",
+        duration: "November 2024 - Present",
+        description: " Leads BioAmak's technology strategy, focusing on developing and implementing innovative AgTech solutions using AI, IoT, blockchain, and other technologies to optimize biochar production."
     },
     {
         title: "Software Engineer Intern",
         company: "Teeket Events and Experiences - Remote",
-        duration: "May 2024 - Present",
+        duration: "May 2024 - September 2024",
         description: "Developed and maintained front-end the admin dashboard using ReactJS."
     },
     {
@@ -64,7 +63,6 @@ const experiences = [
         description: "Worked on various web development projects using JavaScript and HTML/CSS."
     }
 ];
-
 const education = [
     {
         degree: "Bachelor of Science in Software Engineering",
@@ -72,13 +70,22 @@ const education = [
         duration: "May 2022 - Present"
     },
     {
-        degree: "Frontend Developer",
-        institution: "AZUBI AFRICA, Ghana",
-        duration: "October 2023 - Present"
+        degree: "Graduate Frontend Developer",
+        institution: "AZUBI AFRICA Frontend Development Trainings, Ghana",
+        duration: "August 2023 - August 2024"
     }
 ];
-
 const extracurricularActivities = [
+    {
+        activity: "CMU-Africa Graduate Bridge Program Fall 2024",
+        location: "Kigali, Rwanda",
+        description: "6 Weeks Intensive program for graduate studies immersion."
+    },
+    {
+        activity: "AI for Impact Hackathon Semifinalist 2024",
+        location: "Remote, Ethiopia",
+        description: "Semifinalist at A2SV 2024 AI for Impact Hackathon | Africa to Silicon Valley. Ranked among the top 32 teams from over 1118+ teams across Africa."
+    },
     {
         activity: "Google Developers Group Member",
         location: "Bujumbura, Burundi",
@@ -102,20 +109,27 @@ function HomePage() {
             <div className="HomePage m-0 p-0 bg-black font-space border-none">
                 <div className="px-4 lg:px-32 w-full">
                     {/* Hero Section */}
-                    <div className="flex flex-col-reverse md:flex-row items-center -mt-2 pb-12 border-b border-grey border-t-none w-full">
+                    <div
+                        className="flex flex-col-reverse md:flex-row items-center -mt-2 pb-12 border-b border-grey border-t-none w-full">
                         {/* Introduction */}
-                        <div className="flex-row w-full lg:w-full justify-center md:justify-between text-center md:text-start space-y-8">
+                        <div
+                            className="flex-row w-full lg:w-full justify-center md:justify-between text-center md:text-start space-y-8">
                             <h2 className="text-white text-4xl lg:text-88px md:text-48px mb-4 ">Nice to meet you!
                                 I'm <span className="border-b-4 border-green">Erica-Livia.</span>
                             </h2>
-                            <p className="text-grey text-lg md:text-18px w-full md:w-4/6">Based in Kigali, I’m a front-end developer
+                            <p className="text-grey text-lg md:text-18px w-full md:w-4/6">Based in Kigali, I’m a
+                                front-end developer
                                 passionate about building accessible web apps that users love.</p>
 
-                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0 "><a href="#contact">CONTACT ME</a></button>
+                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0 ">
+                                <a href="#contact">CONTACT
+                                    ME</a>
+                            </button>
                         </div>
                         {/* Picture */}
                         <div className="w-full md:w-1/2 flex justify-center md:justify-items-end lg:justify-center">
-                            <img src={erica} alt="erica" className="w-52 h-fit bg-darkGrey lg:w-96 md:w-96 mb-8 lg:pb-0" />
+                            <img src={erica} alt="erica"
+                                 className="w-52 h-fit bg-darkGrey lg:w-96 md:w-96 mb-8 lg:pb-0"/>
                         </div>
                     </div>
                     {/* Proficiency Section */}
@@ -126,7 +140,7 @@ function HomePage() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pt-8 pb-16 border-b">
                             {proficiency.map((skill, index) => (
                                 <div key={index} className="text-center">
-                                    <skill.icon className="text-white text-5xl md:text-88px mb-4 mx-auto" />
+                                    <skill.icon className="text-white text-5xl md:text-88px mb-4 mx-auto"/>
                                     <h2 className="text-white text-2xl md:text-48px">{skill.name}</h2>
                                     <p className="text-grey text-lg md:text-18px">{skill.years} of Experience</p>
                                     <p className="text-grey text-lg md:text-18px">{skill.level}</p>
@@ -136,10 +150,13 @@ function HomePage() {
                     </div>
 
                     {/* Projects Section */}
-                    <div className="pb-16">
+                    <div className="pb-16 ">
                         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                             <h2 className="text-white text-4xl lg:text-88px md:text-6xl">Projects</h2>
-                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0"><a href="#contact">CONTACT ME</a></button>
+                            <button className="text-white border-b border-b-green pb-2 hover:text-green mt-4 md:mt-0"><a
+                                href="#contact">CONTACT
+                                ME</a>
+                            </button>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 py-8">
                             {filteredProjects.map((project) => (
@@ -172,13 +189,18 @@ function HomePage() {
                             </div>
                             <nav className="hidden md:flex space-x-4 text-lg md:text-18px">
                                 <button onClick={() => setActiveSection("experience")}
-                                        className={`text-white ${activeSection === "experience" && "border-b-2 border-green"}`}>Experience</button>
+                                        className={`text-white ${activeSection === "experience" && "border-b-2 border-green"}`}>Experience
+                                </button>
                                 <button onClick={() => setActiveSection("languages")}
-                                        className={`text-white ${activeSection === "languages" && "border-b-2 border-green"}`}>Languages Spoken</button>
+                                        className={`text-white ${activeSection === "languages" && "border-b-2 border-green"}`}>Languages
+                                    Spoken
+                                </button>
                                 <button onClick={() => setActiveSection("education")}
-                                        className={`text-white ${activeSection === "education" && "border-b-2 border-green"}`}>Education</button>
+                                        className={`text-white ${activeSection === "education" && "border-b-2 border-green"}`}>Education
+                                </button>
                                 <button onClick={() => setActiveSection("extracurricular")}
-                                        className={`text-white ${activeSection === "extracurricular" && "border-b-2 border-green"}`}>Extracurricular</button>
+                                        className={`text-white ${activeSection === "extracurricular" && "border-b-2 border-green"}`}>Extracurricular
+                                </button>
                             </nav>
                         </div>
                         <div className="py-8">
@@ -229,18 +251,11 @@ function HomePage() {
                         </div>
                     </div>
                 </div>
-
-                {/* Floating Button */}
-
-                
-                    <button
-                     
-                ><Link to="/onmyradar" className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors animate-pulse">
-                    Life Highlights
-                </Link>
+                <button>
+                    <Link to="/onmyradar" className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors animate-pulse">
+                        Life Highlights
+                    </Link>
                 </button>
-                
-                
             </div>
         </>
     );

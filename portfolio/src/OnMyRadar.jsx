@@ -3,13 +3,23 @@ import menya1 from './assets/menya1.png';
 import azubi from './assets/azubi.jpg';
 import menya2 from './assets/menya2.jpg';
 import synapsetop3 from './assets/synapsetop3.jpg';
+import cmubridge from './assets/cmubridge.jpg';
+import gdg2024 from './assets/gdgrecap2024.jpg';
+import bioamak from './assets/bioamak.jpg';
 import { Link } from 'react-router-dom';
 
 const radarUpdates = [
     {
-        image: menya1,
-        caption: "Discover the story behind Strong Sister and how we aim to empower women in Burundi. Our goals, achievements, and vision for a safer future continue to inspire change.",
-        link: "https://strong-sister.vercel.app/"
+        image: bioamak,
+        caption: "Kicking off the year with a productive in-person meeting at BioAmak Ltd—aligning goals and fueling innovation for 2025! 🌱",
+    },
+    {
+        image: gdg2024,
+        caption: "Had an amazing time at GDG DevFest Bujumbura 2024—connecting, learning, and exploring tech innovations!",
+    },
+    {
+        image: cmubridge,
+        caption: "Thrilled to have completed the CMU-Africa Bridge Program! This experience has been a transformative journey of growth, collaboration, and innovation. 🚀📚",
     },
     {
         image: azubi,
@@ -65,10 +75,10 @@ function OnMyRadar() {
             {/* Floating Button */}
 
             <button
-                
+
             ><Link to="/" className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors">
-                    Back to Home
-                </Link>
+                Back to Home
+            </Link>
             </button>
 
         </div>
