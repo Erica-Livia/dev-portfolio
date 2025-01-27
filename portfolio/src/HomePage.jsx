@@ -252,9 +252,9 @@ function HomePage() {
                     </div>
                 </div>
                 <button>
-                    <a href="/onmyradar" className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors animate-pulse">
+                    <Link to="/onmyradar" className="fixed bottom-8 right-8 bg-green text-white p-4 rounded-full shadow-lg hover:bg-darkGreen transition-colors animate-pulse">
                         Life Highlights
-                    </a>
+                    </Link>
                 </button>
             </div>
         </>
